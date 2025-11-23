@@ -1,5 +1,3 @@
-//structure is a user defined data-type , to use multiple datatypes
-
 #include<stdio.h>
 #include<string.h>
 
@@ -26,7 +24,6 @@ int main(){
     printf("\nStudent DOB: %d, %s, %d", d1.days, d1.month, d1.year);
     
     //nested printing:
-    printf("\n%d, %s, %.2f, %.2f", s1.d1.days, s1.d1.month, s1.d1.year)
+    printf("\n%d, %s, %d", s1.d1.days, s1.d1.month, s1.d1.year); // Fixed: added semicolon and corrected format specifiers
     return 0;
 }
-
