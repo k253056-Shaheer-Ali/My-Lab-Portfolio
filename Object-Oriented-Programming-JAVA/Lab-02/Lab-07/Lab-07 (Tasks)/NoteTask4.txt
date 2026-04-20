@@ -1,0 +1,3 @@
+One important thing to understand about the upcasting here:
+javaBook b1 = new Category1(...); // upcasting
+b1 is of type Book (parent reference) but the actual object is Category1 (child). When you call b1.displayDetails(), it runs Category1's version, not Book's — because Java uses the actual object type at runtime. This is called polymorphism and you'll go deep into it soon.

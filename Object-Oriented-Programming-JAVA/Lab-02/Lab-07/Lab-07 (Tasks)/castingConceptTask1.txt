@@ -1,0 +1,20 @@
+// UPCASTING ✅ implicit
+BankAccount ba = new SavingsAccount("123", "Sherry", 5000, 0.05);
+
+ba.deposit(1000);       // ✅ works — BankAccount method
+ba.calculateInterest(); // ❌ compile error — BankAccount can't see this!
+                        //    even though the object IS a SavingsAccount
+
+// DOWNCASTING ✅ explicit
+SavingsAccount sa = (SavingsAccount) ba;
+sa.calculateInterest(); // ✅ works now — SavingsAccount method visible
+```
+
+---
+
+## The Box Analogy (your favourite 😄)
+```
+new SavingsAccount()  →  BankAccount ba = ...  →  SavingsAccount sa = (SavingsAccount) ba
+  SavingsAccount            PUT INTO                   TAKEN OUT OF
+  object created          BankAccount box 📦          BankAccount box 📦
+                          (calculateInterest hidden)   (calculateInterest visible again)
